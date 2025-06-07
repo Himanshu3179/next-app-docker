@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  app:
+    build: .
+    image: nextapp
+    container_name: nextapp_container
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules  
+    ports:
+      - "3000:3000"
